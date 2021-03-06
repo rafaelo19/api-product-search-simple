@@ -10,13 +10,13 @@ services:
       - .:/var/www/html
       - ./logs/apache2:/var/log/apache2
     depends_on:
-      - database
+      - database-product-seach
     links:
-      - database
+      - database-product-seach
     networks:
       - api-conection
 
-  database:
+  database-product-seach:
     container_name: bd-api-product-seach
     image: postgres
     ports:
