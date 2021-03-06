@@ -13,6 +13,7 @@ class SelectProduct
             f.nome as fornecedor,
             p.marca,
             p.cor,
+            p.unidade_medida,
             p.estoque,
             p.preco
         from loja.produto p

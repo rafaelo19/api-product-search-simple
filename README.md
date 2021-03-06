@@ -47,6 +47,7 @@ $ docker exec -it api-product-search bash
         * `fornecedor`: string
         * `marca`: string
         * `marca`: string
+        * `unidade_medida`: string
         * `estoque`: int
         * `preco`: float
  ```
@@ -58,6 +59,7 @@ $ docker exec -it api-product-search bash
                "fornecedor": "Fornecedor 1",
                "marca": "Nike",
                "cor": "preto",
+               "unidade_medida": "400g",
                "estoque": 10,
                "preco": 169.68
            }
