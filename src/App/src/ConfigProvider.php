@@ -8,8 +8,12 @@ use App\Handler\GetProductHandler;
 use App\Handler\GetProductHandlerFactory;
 use App\Handler\HomePageHandler;
 use App\Handler\HomePageHandlerFactory;
+use App\Middleware\ValidationProductMiddleware;
+use App\Middleware\ValidationProductMiddlewareFactory;
 use App\Service\GetProductService;
 use App\Service\GetProductServiceFactory;
+use App\Service\ValidationProductService;
+use App\Service\ValidationProductServiceFactory;
 use App\Util\Serializer;
 use App\Util\SerializerFactory;
 use Doctrine\ORM\EntityManager;
@@ -56,6 +60,7 @@ class ConfigProvider
 
                 #Service
                 GetProductService::class => GetProductServiceFactory::class,
+                ValidationProductService::class => ValidationProductServiceFactory::class,
 
                 #Util
                 Serializer::class => SerializerFactory::class,

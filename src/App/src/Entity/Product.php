@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation\Type;
 
 /**
- * @ORM\Table(schema="dw", name="produto")
+ * @ORM\Table(schema="loja", name="produto")
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  */
 class Product
