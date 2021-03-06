@@ -3,26 +3,26 @@ version: '3.1'
 services:
   apache:
     image: rafaelo19/php7.4-apache:1.0.0
-    container_name: api-product-seach
+    container_name: api-product-search
     ports:
       - 8080:80
     volumes:
       - .:/var/www/html
       - ./logs/apache2:/var/log/apache2
     depends_on:
-      - database-product-seach
+      - database-product-search
     links:
-      - database-product-seach
+      - database-product-search
     networks:
       - api-conection
 
-  database-product-seach:
-    container_name: bd-api-product-seach
+  database-product-search:
+    container_name: bd-api-product-search
     image: postgres
     ports:
       - 5432:5432
     environment:
-      POSTGRES_DB: product-seach
+      POSTGRES_DB: product-search
       POSTGRES_PASSWORD: admin
       POSTGRES_USER: admin
     networks:
