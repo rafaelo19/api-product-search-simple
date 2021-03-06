@@ -25,7 +25,7 @@ class ValidationProductService
     public function validationProductExist(int $productId): void
     {
         if (!$this->getProductService->getById($productId)) {
-           throw new Exception("Procuto não encontrado!", 404);
+           throw new Exception("Produto não encontrado!", 404);
         }
     }
 
