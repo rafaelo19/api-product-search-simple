@@ -56,7 +56,7 @@ class ConfigProvider
 
                 #Service
                 GetProductService::class => GetProductServiceFactory::class,
-                
+
                 #Util
                 Serializer::class => SerializerFactory::class,
             ],
