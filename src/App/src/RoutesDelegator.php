@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App;
 
 use App\Handler\GetProductHandler;
+use App\Middleware\ValidationProductMiddleware;
 use Mezzio\Application;
 use Psr\Container\ContainerInterface;
 
@@ -17,7 +18,10 @@ class RoutesDelegator
          */
         $app = $callback();
 
-        $app->get("/produtos/{id:\d+}", [GetProductHandler::class], "get.products");
+        $app->get("/produtos/{id:\d+}", [
+            ValidationProductMiddleware::class,
+            GetProductHandler::class
+        ], "get.products");
 
         return $app;
     }

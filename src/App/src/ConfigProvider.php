@@ -54,6 +54,9 @@ class ConfigProvider
             'factories'  => [
                 EntityManager::class => EntityManagerFactory::class,
 
+                #Middleware
+                ValidationProductMiddleware::class => ValidationProductMiddlewareFactory::class,
+
                 #Handler
                 HomePageHandler::class => HomePageHandlerFactory::class,
                 GetProductHandler::class => GetProductHandlerFactory::class,
