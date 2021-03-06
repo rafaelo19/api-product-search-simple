@@ -37,7 +37,7 @@
         }
     },
     "require": {
-        "php": "^7.4",
+        "php": "^7.3",
         "ext-json": "*",
         "ext-pdo": "*",
         "composer/package-versions-deprecated": "^1.10.99",
@@ -96,12 +96,11 @@
         "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
         "migration": "./vendor/bin/phinx",
-        "migration:create": "./vendor/bin/phinx create",
-        "migration:migrate" : "./vendor/bin/phinx migrate -e production",
+        "migration:migrate" : "./vendor/bin/phinx migrate -e development",
         "migration:rollback" : "./vendor/bin/phinx rollback",
         "migration:status" : "./vendor/bin/phinx status",
         "migration:seed:create" : "./vendor/bin/phinx seed:create",
         "migration:seed" : "./vendor/bin/phinx seed:run",
-        "migration:migrate:seed" : "./vendor/bin/phinx migrate -e production && ./vendor/bin/phinx seed:run"
+        "migration:migrate:seed" : "./vendor/bin/phinx migrate -e development && ./vendor/bin/phinx seed:run"
     }
 }
