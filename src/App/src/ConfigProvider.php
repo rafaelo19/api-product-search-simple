@@ -52,9 +52,13 @@ class ConfigProvider
 
                 #Handler
                 HomePageHandler::class => HomePageHandlerFactory::class,
+                GetProductHandler::class => GetProductHandlerFactory::class,
 
                 #Service
                 GetProductService::class => GetProductServiceFactory::class,
+                
+                #Util
+                Serializer::class => SerializerFactory::class,
             ],
         ];
     }
